@@ -1,0 +1,56 @@
+html, body {
+  background-color: #ddd;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.header {
+  background-color: #efefef;
+  height: 46px;
+  width: 100%;
+}
+
+.header nav {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.home-content {
+  width: 100%;
+  background: url('../image/tour-citta.jpg') no-repeat 0 0;
+}
+
+.home-about {
+  width: 100%;
+  background-color: #efefef;
+}
+
+.home-about .container {
+  padding: 20px 0;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.home-search {
+  height: 100px;
+  margin: 100px 0 150px -15px;
+}
+
+.footer {
+  background-color: #efefef;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.host-content {
+  width: 100%;
+  background: url('../image/hotel.jpg') no-repeat 0 0;
+}

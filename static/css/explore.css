@@ -1,0 +1,115 @@
+.home-explore {
+  width: 100%;
+  background: #ddd;
+  padding: 10px 0;
+}
+
+.home-explore .container {
+  padding: 20px 0 20px 0;
+}
+
+.main-explore {
+  float: left;
+  width: 450px;
+  height: 260px;
+  background: url('../image/wine.jpg') no-repeat 0 0; 
+  opacity: 0.6; 
+}
+
+.main-explore h1{
+  font-size: 30px;
+  color: red;
+}
+
+.main-explore h2{
+  font-size: 20px;
+  color: black;
+}
+
+
+.home-explore ul {
+  width: 400px;
+  float: right;
+}
+
+li.explore-card {
+  background-color: white;
+  float: left;
+  width: 100%;
+  height: 125px;
+  margin: 5px 0 0 0;
+  padding: 5px 0 0 5px;
+  list-style: none; 
+  border: 1px solid #afafaf;
+}
+
+li:first-child.explore-card {
+  margin: 0 0 5px 0;
+}
+
+.explore-card-image {
+  width: 80px;
+  height: 80px;
+  float: left;
+  -webkit-border-radius: 59px;
+  -moz-border-radius: 59px;
+  -ms-border-radius: 59px;
+  -o-border-radius: 59px;
+  border-radius: 59px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  overflow: hidden;
+}
+
+.explore-card-image img {
+  width: 80px;
+  height: 80px;
+}
+
+.explore-author {
+  float: left;
+  width: 60%;
+  margin: 0 0 0 10px;
+}
+
+.explore-author h2 {
+font-size: 20px;
+text-align: center;
+padding-bottom: 5px;
+border-bottom: 1px solid #EEE;
+margin-bottom: 8px;
+text-align: center;
+}
+
+.explore-author h3 {
+  font-size: 14px;
+  margin: 0;
+  text-align: center;
+}
+
+.explore-author h4 {
+  font-size: 14px;
+  font-style: italic;
+  margin: 5;
+  color: #AAA;
+  text-align: center;
+}
+
+.host-description {
+  float: left;
+  width: 450px;
+  height: 260px;
+  background: white; 
+  opacity: 0.6; 
+}
+
+.host-description  h1{
+  font-size: 30px;
+  color: red;
+}
+
+.host-description  h2{
+  font-size: 20px;
+  color: black;
+}
