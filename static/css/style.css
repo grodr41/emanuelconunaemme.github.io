@@ -25,7 +25,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 
 .home-content {
   width: 100%;
-  background: url('../image/tour-citta.jpg') no-repeat 0 0;
+  background: url('../image/salerno.jpg') no-repeat 0 0;
 }
 
 .home-about {
@@ -41,6 +41,10 @@ h1, .h1, h2, .h2, h3, .h3 {
 .home-search {
   height: 100px;
   margin: 100px 0 150px -15px;
+}
+
+.white-text {
+  color: white;
 }
 
 .footer {
