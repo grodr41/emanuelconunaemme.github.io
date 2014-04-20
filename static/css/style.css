@@ -18,6 +18,12 @@ h1, .h1, h2, .h2, h3, .h3 {
   width: 100%;
 }
 
+.header-right {
+  float: right;
+  margin: 9px 10px;
+  vertical-align: center;
+}
+
 .header nav {
   width: 900px;
   margin: 0 auto;
@@ -40,12 +46,20 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 
 .home-search {
-  height: 100px;
+  height: 180px;
   margin: 100px 0 150px -15px;
 }
 
 .white-text {
   color: white;
+}
+
+.red-text {
+  color: red;
+}
+
+.black-text {
+  color: black;
 }
 
 .footer {
@@ -58,4 +72,40 @@ h1, .h1, h2, .h2, h3, .h3 {
 .host-content {
   width: 100%;
   background: url('../image/hotel.jpg') no-repeat 0 0;
+}
+
+.selector
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.selected-city {
+  color: red;
+}
+
+.host-content {
+  width: 100%;
+  background: url('../image/hotel.jpg') no-repeat 0 0;
+}
+
+.city-page{
+  width: 100%;
+}
+
+.torino-page {
+  width: 100%;
+  background: url('../image/torino_big.jpg') no-repeat 0 0;
+}
+
+.milano-page {
+  width: 100%;
+  background: url('../image/milano_big.jpg') no-repeat 0 0;
+}
+
+.teramo-page {
+  width: 100%;
+  background: url('../image/teramo_big.jpg') no-repeat 0 0;
 }
