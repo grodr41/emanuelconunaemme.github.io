@@ -115,3 +115,18 @@ h1, .h1, h2, .h2, h3, .h3 {
   width: 100%;
   background: url('../image/teramo_big.jpg') no-repeat 0 0;
 }
+
+.hotel-hashtag {
+  text-align: center;
+  font-size: 20px;
+}
+
+.rating {
+  text-align: center;
+  font-size: 15px;
+}
+
+.star {
+  color: #eeda3e;
+  float: right;
+}
