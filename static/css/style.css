@@ -47,7 +47,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 
 .home-search {
   height: 180px;
-  margin: 100px 0 150px -15px;
+  margin: 100px 0 50px -15px;
 }
 
 .white-text {
@@ -91,12 +91,18 @@ h1, .h1, h2, .h2, h3, .h3 {
   background: url('../image/hotel.jpg') no-repeat 0 0;
 }
 
+.results-head {
+  height: 180px;
+  margin: 50px 0 0px -15px;
+}
+
 .city-page{
   width: 100%;
 }
 
 .torino-page {
   width: 100%;
+  background-position:center; 
   background: url('../image/torino_big2.jpg') no-repeat 0 0;
 }
 
