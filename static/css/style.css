@@ -130,3 +130,8 @@ h1, .h1, h2, .h2, h3, .h3 {
   color: #eeda3e;
   float: right;
 }
+
+.multires-container {
+  width: 900px;
+  margin: 0 auto;
+}
