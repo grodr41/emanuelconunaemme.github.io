@@ -138,3 +138,27 @@ h1, .h1, h2, .h2, h3, .h3 {
   width: 1100px;
   margin: 0 auto;
 }
+
+.panel-citymap {
+  border-color: #339933;
+}
+.panel-citymap > .panel-heading {
+  color: #fff;
+  background-color: #339933;
+  border-color: #339933;
+}
+.panel-citymap > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #339933;
+}
+.panel-citymap > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #339933;
+}
+
+
+
+.book-footer {
+  background-color: #80b2ff;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
