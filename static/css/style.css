@@ -7,6 +7,12 @@ html, body {
   margin: 0 auto;
 }
 
+.host-container {
+  width: 900px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
 .navbar-brand {
   height: 44px;
 }
