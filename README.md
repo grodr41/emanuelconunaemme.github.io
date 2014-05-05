@@ -1,5 +1,5 @@
-Alpha version to define a prototype of EmItaly.
+Alpha version that helps define a prototype of EmItaly.
 
-This is intendet to be an internal documents to better define the product.
+This is intended to be internal documents that better define our product.
 
-A beta version to show the website to potential investor should be rebuilt from scratch, using this as a track.
+Goal: Develop a beta version of a functional website for potential investors. Afterwards, website should be rebuilt from scratch using these documents as a track.
