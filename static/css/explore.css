@@ -1,11 +1,21 @@
 .home-explore {
   width: 100%;
   background: #ddd;
-  padding: 10px 0;
+  padding: 0;
 }
 
 .home-explore .container {
-  padding: 20px 0 20px 0;
+  padding: 10px 50px 0 50px;
+}
+
+.home-explore .containerframe {
+  background: #e0e6f8;
+  margin: 50px auto;
+}
+
+.containerframe h1 {
+  font-size: 50px;
+  color: #3c763d;
 }
 
 .main-explore {
@@ -30,6 +40,9 @@
 .home-explore ul {
   width: 400px;
   float: right;
+}
+.home-explore h2 {
+  color: black;
 }
 
 li.explore-card {

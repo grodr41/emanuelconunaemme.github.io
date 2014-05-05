@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
   <meta charset="utf-8">
 
@@ -8,13 +8,44 @@
   <title>EmItaly - Italy, real as ever. (Beta)</title>
   <meta name="description" content="Description">
 
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
+  <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+  <script src="static/js/momt.js"></script>
+
   <link rel="stylesheet" href="static/css/lib/bootstrap.css">
   <link rel="stylesheet" href="static/css/style.css">
   <link rel="stylesheet" href="static/css/explore.css">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
   <link rel="shortcut icon" href="static/favicon.ico">
+
+  <script type = "text/javascript">
+          function displayImage(image) {
+              document.getElementById("background").className = image;
+          }
+
+          function displayNextImage() {
+              x = (x == images.length - 1) ? 0 : x + 1;
+              displayImage(images[x]);  
+          }
+
+          function displayPreviousImage() {
+              x = (x <= 0) ? images.length - 1 : x - 1;
+              displayImage(images[x]);           
+          }
+
+          function startTimer() {
+              setInterval(displayNextImage, 4000);
+          }
+
+          var images = [], x = -1;
+          images[0] = "home-content-1";
+          images[1] = "home-content-2";
+          images[2] = "home-content-3";
+          images[3] = "home-content-4";
+      </script>
 </head>
-<body>
+<body onload = "startTimer()">
 
   <header class="header">
     <nav>
@@ -24,34 +55,110 @@
     </nav>
   </header>
 
-  <div class="home-content">
+  <div id="background" class="home-content-4">
     <div class="container">
-      <div class="home-search row">
-        <div class="col-xs-12">
+      <div class="row">
+        <div class="col-xs-6 home-title">
           <h1>Italy, real as ever.</h1>
           <h3>Experience quality only authentic locals can share.</h3>
         </div>
-        
-        <div class="col-xs-4">
-          <a href="singleres1.html">
-            <button type="submit" class="btn btn-lg btn-success">Visit one location</button>
-          <a>
+
+        <div class="col-xs-6 home-form" ng-controller="MyCtrl1">
+          <div class="home-form-right-bg"></div>
+          <div class="home-form-right">
+            <div class="form-horizontal">
+              <div class="form-group col-sm-12">
+                <ul class="list-city">
+                  <li ng-repeat="city in listCity" ng-bind="city"></li>
+                </ul>
+              </div>
+              <div class="form-group col-sm-12">
+                <input type="text" class="form-control input-sm" ng-model="whereCity"
+                id="exampleInputEmail1" placeholder="Where">
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label input-sm">Check in :</label>
+                <div class="col-sm-8">
+                  <p class="input-group">
+                    <input type="text" class="form-control input-sm" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-default btn-sm" ng-click="open($event)">
+                        <i class="glyphicon glyphicon-calendar"></i>
+                      </button>
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label input-sm">Check out :</label>
+                <div class="col-sm-8">
+                  <p class="input-group">
+                    <input type="text" class="form-control input-sm" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-default btn-sm" ng-click="open($event)">
+                        <i class="glyphicon glyphicon-calendar"></i>
+                      </button>
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label input-sm">Rooms :</label>
+                <div class="col-sm-2">
+                  <select class="form-control input-sm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <label for="inputEmail3" class="col-sm-4 control-label input-sm">Adults :</label>
+                <div class="col-sm-2">
+                  <select class="form-control input-sm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <label for="inputEmail3" class="col-sm-4 control-label input-sm">Children :</label>
+                <div class="col-sm-2">
+                  <select class="form-control input-sm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group home-form-btn">
+                <div class="col-xs-4">
+                  <button type="submit" class="btn btn-success" ng-click="nextCity()">Next city</button>
+                </div>
+                <div class="col-xs-4">
+                  <a href="mutires1.html">
+                    <button type="submit" class="btn btn-success">Done trip!</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-xs-4">
-          <a href="mutires1.html">
-            <button type="submit" class="btn btn-lg btn-success">Make a trip</button>
-          </a>
-        </div>
+
       </div>
     </div>
   </div>
 
   <div class="home-explore">
-    <div class="container">
-      <h1>#Discover</h1>
-      <div class="row">
+    <div class="container containerframe">
+      <div class="row" style="vertical-align=center;">
 
         <div class="col-sm-7">
+          <h1>#Discover</h1>
+          <br>
          <div class="panel panel-primary main-explore">
             <div class="panel-heading">
               <h3 class="panel-title">Wine</h3>
@@ -64,6 +171,8 @@
 
 
         <div class="col-sm-5">
+          <br>
+          <h2>Where</h2>
           <div class="panel panel-info">
             <div class="panel-heading">
               <h3 class="panel-title">Mauro, Director</h3>
