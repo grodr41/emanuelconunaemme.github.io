@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
   <meta charset="utf-8">
 
@@ -8,13 +8,70 @@
   <title>EmItaly - Italy, real as ever.</title>
   <meta name="description" content="Description">
 
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
+  <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+  <script src="static/js/momt.js"></script>
+
+
+
+
   <link rel="stylesheet" href="static/css/lib/bootstrap.css">
   <link rel="stylesheet" href="static/css/style.css">
   <link rel="stylesheet" href="static/css/explore.css">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
   <link rel="shortcut icon" href="static/favicon.ico">
+
+ <script type = "text/javascript">
+          function displayImage(image) {
+              document.getElementById("background").className = image;
+          }
+
+          function displayNextImage() {
+              x = (x == images.length - 1) ? 0 : x + 1;
+              displayImage(images[x]);  
+          }
+
+          function displayPreviousImage() {
+              x = (x <= 0) ? images.length - 1 : x - 1;
+              displayImage(images[x]);           
+          }
+
+          function startTimer() {
+              setInterval(displayNextImage, 10000);
+              preloader();
+          }
+
+          function preloader() {
+            if (document.images) {
+              var img1 = new Image();
+              var img2 = new Image();
+              var img3 = new Image();
+
+              img1.src = "static/image/host-background-1.jpg";
+              img2.src = "static/image/host-background-2.jpg";
+              img3.src = "static/image/host-background-3.jpg";
+            }
+          }
+
+          var images = [], x = -1;
+          images[0] = "host-content-1";
+          images[1] = "host-content-2";
+          images[2] = "host-content-3";
+          images[3] = "host-content-4";
+      </script>
+
+
+
+
+
+
 </head>
-<body>
+<body onload = "startTimer()">
+
 
   <header class="header">
     <nav>
@@ -24,7 +81,7 @@
     </nav>
   </header>
 
-  <div class="host-content">
+  <div id="background" class="host-content-1">
     <div class="host-container">
       <div class="home-search row">
         <div class="col-xs-12 white-text">

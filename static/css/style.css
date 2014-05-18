@@ -175,9 +175,24 @@ ul.list-city {
   color: red;
 }
 
-.host-content {
+.host-content-1 {
   width: 100%;
-  background: url('../image/hotel2.jpg') no-repeat 0 0;
+  background: url('../image/host-background-1.jpg') no-repeat 0 0;
+}
+
+.host-content-2 {
+  width: 100%;
+  background: url('../image/host-background-2.jpg') no-repeat 0 0;
+}
+
+.host-content-3 {
+  width: 100%;
+  background: url('../image/host-background-3.jpg') no-repeat 0 0;
+}
+
+.host-content-4 {
+  width: 100%;
+  background: url('../image/host-background-4.jpg') no-repeat 0 0;
 }
 
 .results-head {
