@@ -255,6 +255,21 @@ ul.list-city {
   border-bottom-color: #339933;
 }
 
+.panel-video {
+  border-color: #339960;
+}
+.panel-video > .panel-heading {
+  color: #fff;
+  background-color: #339960;
+  border-color: #339960;
+}
+.panel-video > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #339960;
+}
+.panel-video > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #339960;
+}
+
 .about-content-1 {
   width: 100%;
   height: : 1300px;
@@ -318,4 +333,8 @@ text-align: center;
   width: 100%;
   text-align: center;
   padding: 10px 0;
+}
+
+.center-div {
+  float: center;
 }
